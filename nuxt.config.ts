@@ -4,6 +4,6 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   modules: ['@nuxtjs/prismic'],
     prismic: {
-      endpoint: 'tadas-test'
+      endpoint: 'tadan-test'
     },
 })

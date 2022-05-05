@@ -35,6 +35,17 @@
           "constraint": {},
           "thumbnails": []
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "image_push": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     }
   }

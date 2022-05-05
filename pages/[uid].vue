@@ -1,8 +1,10 @@
-<script lang='ts' setup>
+<script lang="ts" setup>
+  import { useRoute } from 'vue-router';
+  const route = useRoute();  
+
   const { client } = usePrismic()
-  const { data: cmsData } = await useAsyncData('home', () => client.getByUID('post', 'home'))
-  const page = cmsData.value.data
-  import { components } from "~/slices"
+  const { data: cmsData } = await useAsyncData(route.params.uid, () => client.getByUID('post', route.params.uid))
+  const page = cmsData && cmsData.value ? cmsData.value.data : 'page not found'
 </script>
 
 <template>
@@ -10,7 +12,6 @@
     <h1>{{page.title}}</h1>
     <div>{{page.content[0].text}}</div>
     <img :src="page.heroimage.url" />
-    <a href="/about">About me</a>
     <slice-zone v-if="page.slices && page.slices.length" :slices="page.slices" :components="components"/>
   </main>
 </template>

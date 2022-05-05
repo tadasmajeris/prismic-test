@@ -4,6 +4,7 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   modules: ['@nuxtjs/prismic'],
   prismic: {
-    endpoint: 'tadan-test'
+    endpoint: 'tadan-test',
+    linkResolver: "~/prismic/linkResolver",
   }
 })

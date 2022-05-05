@@ -5,6 +5,12 @@ Look at the [prismic 3 module](https://v3.prismic.nuxtjs.org/).
 
 ## Setup
 
+Use Node version 16+
+
+```bash
+nvm use 16
+```
+
 Make sure to install the dependencies:
 
 ```bash

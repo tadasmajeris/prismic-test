@@ -5,6 +5,14 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/prismic'],
   prismic: {
     endpoint: 'tadan-test',
-    linkResolver: "~/prismic/linkResolver",
+    // linkResolver: "~/prismic/linkResolver",
+    clientConfig: {
+      routes: [
+        {
+          type: "post",
+          path: "/:uid"
+        }
+      ]
+    }
   }
 })

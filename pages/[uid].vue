@@ -12,7 +12,6 @@
     <h1>{{page.title}}</h1>
     <div v-if="page.content">{{page.content[0].text}}</div>
     <img v-if="page.heroimage" :src="page.heroimage.url" />
-    <NuxtLink to="/">Home</NuxtLink>
     <slice-zone v-if="page.slices && page.slices.length" :slices="page.slices" :components="components" />
   </main>
 </template>

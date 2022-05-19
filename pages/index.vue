@@ -10,8 +10,8 @@
     <h1>{{page.title}}</h1>
     <div>{{page.content[0].text}}</div>
     <img :src="page.heroimage.url" />
-    <a href="/about">About me</a>
-    <a href="/contact">Contact</a>
+    <NuxtLink to="/about">About me</NuxtLink>
+    <NuxtLink to="/contact">Contact</NuxtLink>
     <slice-zone v-if="page.slices && page.slices.length" :slices="page.slices" :components="components"/>
   </main>
 </template>

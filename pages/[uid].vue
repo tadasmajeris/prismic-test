@@ -6,6 +6,7 @@
   const { client } = usePrismic()
   const { data: cmsData } = await useAsyncData(uid, () => client.getByUID('post', uid))
   const page = cmsData && cmsData.value ? cmsData.value.data : {title: 'page not found'}
+  import { components } from '~~/slices';
 </script>
 
 <template>
@@ -13,7 +14,8 @@
     <h1>{{page.title}}</h1>
     <div v-if="page.content">{{page.content[0].text}}</div>
     <img v-if="page.heroimage" :src="page.heroimage.url" />
-    <slice-zone v-if="page.slices && page.slices.length" :slices="page.slices" />
+    <a href="/">Home</a>
+    <slice-zone v-if="page.slices && page.slices.length" :slices="page.slices" :components="components" />
   </main>
 </template>
 

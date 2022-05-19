@@ -11,6 +11,7 @@
     <div>{{page.content[0].text}}</div>
     <img :src="page.heroimage.url" />
     <a href="/about">About me</a>
+    <a href="/contact">Contact</a>
     <slice-zone v-if="page.slices && page.slices.length" :slices="page.slices" :components="components"/>
   </main>
 </template>
